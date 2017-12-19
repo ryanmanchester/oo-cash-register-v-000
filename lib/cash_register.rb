@@ -17,7 +17,7 @@ class CashRegister
     q.times{|i| @items << item}
     @price = price
     #self.class.all
-    binding.pry
+    #binding.pry
   end
 
   def apply_discount
