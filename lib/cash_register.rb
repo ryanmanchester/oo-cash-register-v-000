@@ -30,7 +30,7 @@ class CashRegister
   end
 
   def items
-  self.class.all
+  add_item(item, price, q=1)
 
   end
 
