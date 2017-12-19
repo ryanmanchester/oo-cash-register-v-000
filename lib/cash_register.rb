@@ -1,6 +1,6 @@
 require 'pry'
 class CashRegister
-  attr_accessor :total, :discount, :items
+  attr_accessor :total, :discount, :items, :price
   @@all = []
   def self.all
     @@all
@@ -15,6 +15,7 @@ class CashRegister
   def add_item(item, price, q=1)
     self.total += price * q
     q.times{|i| @items << item}
+    @price = price
     #self.class.all
     #binding.pry
   end
