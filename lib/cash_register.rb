@@ -13,9 +13,8 @@ class CashRegister
   end
 
   def add_item(item, price, q=1)
-    arr = []
     self.total += price * q
-    q.times{|i| arr << item}
+    q.times{|i| self.class.all << item}
     #self.class.all
     binding.pry
   end
